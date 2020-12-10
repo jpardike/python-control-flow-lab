@@ -12,3 +12,16 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+number_sequence = 0
+last_number = 1
+number_before_last = 0
+
+
+for i in range(0, 51):
+    number_sequence = last_number + number_before_last
+    number_before_last = last_number
+    last_number = number_sequence
+    print(f'term: {i} / number: {number_sequence}')
+
+
